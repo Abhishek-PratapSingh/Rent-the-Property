@@ -20,6 +20,9 @@ connection.once('open', () => {
 })
 
 //Define Routes
+app.get('/', (req,res)=>{
+   res.send("Home page")
+})
 app.use('/api/authenticate', require('./controllers/auth'));
 app.use('/api/properties', require('./controllers/allproperty'));
 app.use('/api/manageProperties', require('./controllers/manageProperty'));
