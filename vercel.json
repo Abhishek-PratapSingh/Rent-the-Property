@@ -3,7 +3,10 @@
     "builds": [
       {
         "src": "server.js",
-        "use": "@vercel/node"
+        "use": "@vercel/node",
+        "config": {
+            "includeFiles": ["controllers/**/*"] 
+          }
       }
     ],
     "routes": [
@@ -26,4 +29,8 @@
       }   
 
     ]
+    ,
+    "env": {
+        "ATLAS_URI": "mongodb+srv://apsingh123:12341234@cluster0.kgvyd7k.mongodb.net/?retryWrites=true&w=majority"
+      }
   }
