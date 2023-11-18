@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/",
+        "dest": "index.js"
+      },
+      {
+        "src": "/api/authenticate",
+        "dest": "./controllers/auth"
+      }
+      ,
+      {
+        "src": "/api/properties",
+        "dest": "./controllers/allproperty"
+      },
+      {
+        "src": "/api/manageProperties",
+        "dest": "./controllers/manageProperty"
+      }   
+
+    ]
+  }
